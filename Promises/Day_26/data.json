@@ -1,0 +1,25 @@
+[
+    {
+        "name":"sathya",
+        "id": 100,
+        "isMarried":true
+    },
+
+    {
+        "name":"pushkar",
+        "id": 10,
+        "isMarried":false
+    },
+
+    {
+        "name":"rutik",
+        "id": 110,
+        "isMarried":true
+    },
+
+    {
+        "name":"om",
+        "id": 1,
+        "isMarried":false
+    }
+]

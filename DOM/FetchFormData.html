@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" class="form-control">
+      Enter your Username:
+      <input
+        type="text"
+        name="username"
+        id="username"
+        placeholder="Enter username"
+      /><br /><br />
+      Enter your password:
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Enter password"
+      /><br /><br />
+      Enter your e-mail:
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Enter email"
+      /><br /><br />
+
+      <span>Enter DOB</span>
+      <input type="date" name="Dob" id="Dob" /><br />
+
+      <span>Select the gender</span>
+      <input type="radio" name="gender" id="male" value="male" /> male
+      <input type="radio" name="gender" id="female" value="female" /> female
+      <input type="radio" name="gender" id="others" value="others" /> others
+      <br />
+
+      <span>Select Courses</span>
+      <input type="checkbox" name="Courses" id="java" value="java" /> java
+      <input type="checkbox" name="Courses" id="js" value="js" /> js
+      <input type="checkbox" name="Courses" id="php" value="php" /> php
+      <input type="checkbox" name="Courses" id="mongodb" value="mongodb" />
+      mongodb <br />
+
+      <label for="percentage">Select percentage</label>
+      <input
+        type="range"
+        name="percentage"
+        id="percentage"
+        max="100"
+        min="45"
+      />
+      <span class="display_perc">50</span><br />
+
+      <label for="country">Select country</label>
+
+      <select name="country" id="country">
+        <option value="">Select</option>
+        <option value="Thailand">Thailand</option>
+        <option value="Rassia">Rassia</option>
+        <option value="Uk">Uk</option>
+        <option value="Bali">Bali</option>
+      </select>
+      <br />
+
+      <button type="submit">Log in</button>
+    </form>
+    <script src="./FetchFormData.js"></script>
+  </body>
+</html>

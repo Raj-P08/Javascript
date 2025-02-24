@@ -1,0 +1,30 @@
+JS Modules****
+
+-> Modules are used to transfer the data from one js file to another js file.
+-> i.e. we can import and export the data.
+-> there are 2 types of Modules
+1. common js
+2. ES6 Modules
+
+1) commonjs Modules:-
+-> It work only on the server side
+-> In order to export the data we can use module.exports property which takes one object as a value where we can pass the data which we want to export.
+-> To import the data we can use require() method which takes one argument i.e. file path and this method returns all the data in the form of object.
+
+2) ES6 Modules:-
+-> It works only on the browser side.
+-> There are 2 types in ES6 module.
+i. Default export
+ii. Named export
+
+-> Here we should use the extension .mjs and also we should pass one attribute type='module' in the script tag.
+-> In Default export only one data we can able to transfer.
+**Syntax: export default data;  (export statement)
+import identifier from (file path);  (import statement)
+
+
+-> IN Named export we can transfer multiple data and to export the data we should use export keyword and it should prefixed before the data.
+-> import statement for Named export-
+    import {identifiers} from 'file path';
+
+-> we can also change the identifier name using 'as' keyword.

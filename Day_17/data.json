@@ -1,0 +1,16 @@
+{
+    "users":[
+        {
+            "name":"sachin",
+            "id":123,
+            "skills":["java","js"],
+            "isMarried":true
+        }
+    ],
+    "products":[
+        {
+            "pname":"Mobile phone",
+            "price":12000
+        }
+    ]
+}
