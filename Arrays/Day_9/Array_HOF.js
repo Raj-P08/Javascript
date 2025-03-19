@@ -88,7 +88,7 @@ do {
 } while (i < v.length);
 
 //* reduce();
-// ? it takes two arguments
+// ? it takes two arguments i.e. callback function and initial accumulator value
 // ? it will take one function as an argument and that function takes 2 parameters
 // ? it will reduce the array and return single value
 // ? it will not affect the original array
@@ -108,8 +108,9 @@ console.log(r4);
 //! sort();
 
 //? It sort the array based on ASCII value
+// ? By default it sort the array in ascending order
 //? It affects the original array
-//? It takes a function as an argument and it will take 2 parameters
+//? It takes a compare function as an argument and it will take 2 parameters
 // * it will subtract the a-b(ascending order) and b-a(descending order)
 // * +ve - a sorted after b
 // * -ve - b sorted after a
@@ -153,7 +154,7 @@ console.log(r8);
 
 //! fill();
 // ? it is used to fill the elements into an array
-// ? it takes 3 parameters value, start , end
+// ? it takes 3 arguments value, start index , end index
 // ? it affects the original array
 
 let ar = [
@@ -171,3 +172,15 @@ let ar = [
 
 ar.fill("str", 4, 7);
 console.log(ar);
+// [
+//   20,
+//   'Hello world',
+//   90,
+//   true,
+//   'str',
+//   'str',
+//   'str',
+//   [Function (anonymous)],
+//   false,
+//   [ 10, 30 ]
+// ]
