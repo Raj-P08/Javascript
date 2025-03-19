@@ -5,30 +5,38 @@ let arr = [10, 20, 30, 40, 50];
 // }
 
 // find();
-
+// It is used to find the first element of the array based on the condition.
+// it will take one function as an argument and this function takes 3 parameters v, i, array
+// if the condition is satisfied then it returns that element
+// and if the condition is not satisfied then it returns 'undefined'.
 let arg1 = function (v, i, ar) {
   console.log(v, i, ar);
   return v > 25;
 };
 
 let res1 = arr.find(arg1);
-console.log(res1);
+console.log(res1); // 30
 
 let res2 = arr.find((v, i, ar) => v > 60);
-console.log(res2);
+console.log(res2); // undefined
 
 //* findIndex();
-
+// It is used to find the index position of the satisfied condition
+// It takes 1 callback function as an argument and that function takes 3 parameters i.e. v,i,array
+// it returns that index position if the condition satisfied
+// and if the condition is not satisfied then it returns -1.
 let res3 = arr.findIndex((v, i, ar) => {
   return v > 30;
 });
 
-console.log(res3);
+console.log(res3); // 3
 
 let res4 = arr.findIndex((v) => v > 80);
 console.log(res4);
 
 // filter();
+// it returns the array of the elements which satisfied the condition and if the condition is not satisfied then it returns empty array
+// it takes 1 argument as callback function and that function takes 3 parameters i.e. v,i, array.
 let a1 = [40, 50, 20, 34, 10];
 let res5 = a1.filter((v, i, ar) => {
   return v > 20;
@@ -37,6 +45,7 @@ console.log(res5);
 // console.log(a1);
 
 // map();
+// it takes 1 argument as callback function and that function takes 3 parameters i.e. v,i, array.
 
 let res6 = a1.map((v, i, ar) => {
   return v + 10;
@@ -127,12 +136,15 @@ console.log(c);
 // ? it takes 1 argument i.e. depth  (depth = array dimension - 1 e.g. depth = 3-1 , depth  = 2)
 
 const d = [10, [30, ["str", "js"], 40], ["rect"]];
-let r5 = d.flat();
-let r6 = r5.flat();
+console.log("Flat methods");
+let r5 = d.flat(); //[ 10, 30, [ 'str', 'js' ], 40, 'rect' ]
+let r6 = r5.flat(); // [ 10, 30, 'str', 'js', 40, 'rect' ]
+console.log(r5);
 console.log(r6);
 
 let r7 = d.flat(2);
 console.log(r6);
+console.log(r7); // [ 10, 30, 'str', 'js', 40, 'rect' ]
 
 //! includes();
 // ? it will return boolean value

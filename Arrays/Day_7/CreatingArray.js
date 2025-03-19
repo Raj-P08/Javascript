@@ -12,7 +12,7 @@ const arr = new Array(12, 20, 30, "str");
 // arr[1] = 20;l
 console.log(arr);
 
-// Array.of();
+// 3) Array.of();
 
 let ar = Array.of("str", true, 1n, undefined);
 console.log(ar);
@@ -22,3 +22,6 @@ console.log(c);
 
 let v = Array.of(10);
 console.log(v);
+
+// *Note: In the array construtor if we are passing 1 argument i.e. number then it will consider length of the array
+// * But in the Array.of() method it will consider element
