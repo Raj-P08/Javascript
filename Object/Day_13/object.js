@@ -58,7 +58,7 @@ console.log(s1.doorNo);
 //   console.log(this.x);
 // }
 
-// ! -------------- 2. Using class ------------------
+// ! -------------- 2. Using class constructor------------------
 
 let x = 100;
 
