@@ -34,3 +34,24 @@ console.log(r1);
 
 // ! WAP to find the given string is palindrome or not?
 // ! WAP to find the sum of numbers in alpha numeric string
+
+//* Find vowels from the string
+
+function findVowels(str) {
+  let vowels = "aeiouAEIOU";
+
+  return str
+    .split("")
+    .filter((char) => vowels.includes(char))
+    .join("");
+}
+
+console.log(findVowels("javascript"));
+
+//* remove the duplicate values from the array
+
+function removeDuplicate(arr) {
+  let a = new Set(arr);
+  console.log([...a]);
+}
+removeDuplicate([1, 4, 5, 1, 4, 3]);
