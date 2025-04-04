@@ -45,6 +45,7 @@
 // function abcd() {
 //   fetch(`https://randomuser.me/api/`)
 //     .then((raw) => {
+//       console.log(raw);
 //       return raw.json();
 //     })
 //     .then((data) => {
@@ -56,8 +57,22 @@
 //dekho jab bhi code async he to aapko uske liye wait karna padta he
 // kyoki humein nahi pata uska answer kab aayega
 async function abcd() {
-  let raw = await fetch(`https://randomuser.me/api/`);
-  let data = await raw.json();
-  console.log(data);
+  try {
+    // let raw = await fetch(`https://randomuser.me/api/`);
+    let raw = await fetch(`https://dummyjson.com/products`);
+    let data = await raw.json();
+    let allData = data.products;
+    console.log(allData);
+
+    let div = document.querySelector(".container");
+    allData.map((v, i) => {
+      let { id, title, description, price } = allData[i];
+      div.innerHTML += `<h2>ID : ${id}</h2>
+      <p>TITLE : ${title}</p>
+      <h4>Description : ${description}</h4`;
+    });
+  } catch (e) {
+    console.log(e);
+  }
 }
 abcd();

@@ -15,24 +15,24 @@
 // *    3) finally()
 //  this methods takes 1 argument as a callback function and that function takes one argument as promiseResult.
 
-let p = new Promise(function (res, rej) {
-  let proposeRes = false;
-  if (proposeRes) res("resolved promise 1");
-  else rej("rejected promise 1");
-});
+// let p = new Promise(function (res, rej) {
+//   let proposeRes = true;
+//   if (proposeRes) res("resolved promise 1");
+//   else rej("rejected promise 1");
+// });
 
-p.then((d) => {
-  // promise result one parameter
-  console.log(d);
-  console.log("resolved");
-})
-  .catch((e) => {
-    console.log(e);
-    console.log("rejected");
-  })
-  .finally(() => {
-    console.log("It will execute if promise is resolved or rejected");
-  });
+// p.then((d) => {
+//   // promise result one parameter
+//   console.log(d);
+//   console.log("resolved");
+// })
+//   .catch((rej) => {
+//     console.log(rej);
+//     console.log("rejected");
+//   })
+//   .finally(() => {
+//     console.log("It will execute if promise is resolved or rejected");
+//   });
 
 //   ! --------------- window.fetch(); -------------
 
@@ -43,6 +43,7 @@ p.then((d) => {
 // let p1 = Promise.resolve("resolves promise 1");
 // console.log(p1);
 // let p2 = Promise.reject("rejected promise 1");
+// console.log(p2);
 // p2.then(function (d) {
 //   console.log(d);
 // }).catch(function (e) {
@@ -50,11 +51,14 @@ p.then((d) => {
 // });
 
 let data = window.fetch("./data.json");
+// console.log(data);
 
 data.then((d) => {
+  console.log(d); //? Response
   let res = d.json();
-  console.log(res);
+  console.log(res); //? Promise
   res.then((v) => {
+    console.log(v);
     let div = document.querySelector(".cont");
     v.map((val) => {
       let { name, id, isMarried } = val;
