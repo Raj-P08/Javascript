@@ -12,7 +12,7 @@ let largest2 = res.length - 2;
 console.log("largest no.: " + res[le]);
 console.log("Second largest: " + res[largest2]);
 
-// ! WAP to find first second occurance of element in the given array.
+//* WAP to find first second occurance of element in the given array.
 
 let b = [10, 20, 30, 40, 20, 10];
 let newAr = [];
