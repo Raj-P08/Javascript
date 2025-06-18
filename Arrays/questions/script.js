@@ -24,3 +24,25 @@ naturalArray.forEach((item, index) => {
 });
 
 console.log(naturalArray);
+
+// ! 4. Consider an array of MCU heroes(["ironman", "hulk", "wanda", 'black panther', "captain america", "black widow"]).
+// a. Add spiderman at the end and thor at the start.
+// b. Remove black widow and add howkeye in its place.
+// c. Check if captain america is present in the array.
+
+let mcuHeroes = [
+  "ironman",
+  "hulk",
+  "wanda",
+  "black panther",
+  "captain america",
+  "black widow",
+];
+
+mcuHeroes.push("spiderman"); // Add spiderman at the end
+mcuHeroes.unshift("thor"); // Add thor at the start
+
+mcuHeroes.splice(5, 1, "howkeye"); // Remove black widow and add howkeye in its place
+console.log(mcuHeroes);
+
+console.log(mcuHeroes.includes("captain america")); // Check if captain america is present in the array
